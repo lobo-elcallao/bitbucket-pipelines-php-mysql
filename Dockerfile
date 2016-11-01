@@ -28,3 +28,5 @@ RUN \
  npm install --no-color --production --global gulp-cli webpack mocha grunt &&\
  rm -rf /root/.npm /root/.composer /tmp/* /var/lib/apt/lists/*
 
+RUN \
+ mysql -uroot -proot -e'create database test'
