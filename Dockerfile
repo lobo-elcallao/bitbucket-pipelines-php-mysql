@@ -27,3 +27,6 @@ RUN \
  wget http://codeception.com/codecept.phar && chmod +x codecept.phar && mv codecept.phar /usr/local/bin/codecept &&\
  npm install --no-color --production --global gulp-cli webpack mocha grunt &&\
  rm -rf /root/.npm /root/.composer /tmp/* /var/lib/apt/lists/*
+
+RUN \
+ mysql -uroot -proot -e"create database test"
