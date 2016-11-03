@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Damien Debin <damien.debin@smartapps.fr>
+MAINTAINER Jay Payne <j.payne@taktwerk.ch>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL en_US.UTF-8
@@ -27,7 +27,3 @@ RUN \
  wget http://codeception.com/codecept.phar && chmod +x codecept.phar && mv codecept.phar /usr/local/bin/codecept &&\
  npm install --no-color --production --global gulp-cli webpack mocha grunt &&\
  rm -rf /root/.npm /root/.composer /tmp/* /var/lib/apt/lists/*
-
-# Make MYSQL available
-EXPOSE 3306
-
